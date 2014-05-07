@@ -1,5 +1,5 @@
-var inputOperantA = document.querySelector("#operant_a");
-var inputOperantB = document.querySelector("#operant_b");
+var inputoperandA = document.querySelector("#operand_a");
+var inputoperandB = document.querySelector("#operand_b");
 var inputOperator = document.querySelector("#operator");
 var output = document.querySelector("#output");
 var error = document.querySelector("#error");
@@ -83,26 +83,26 @@ var isReady = function(operator, a, b){
 };
 
 var startCalc = function(){
-	var operantA = inputOperantA.value;
-	var operantB = inputOperantB.value;
+	var operandA = inputoperandA.value;
+	var operandB = inputoperandB.value;
 	var operator = inputOperator.value;
 
-	operantA = Number(operantA);
-	operantB = Number(operantB);
+	operandA = Number(operandA);
+	operandB = Number(operandB);
 
 	hideError();
-	if(isReady(operator, operantA, operantB)){
+	if(isReady(operator, operandA, operandB)){
 		var result = 0;
 		if(operator == "+"){
-			result = add(operantA, operantB);
+			result = add(operandA, operandB);
 		}else if(operator == "-"){
-			result = subtract(operantA, operantB)
+			result = subtract(operandA, operandB)
 		}else if(operator == "*"){
-			result = multiply(operantA, operantB);
+			result = multiply(operandA, operandB);
 		}else if(operator == "/"){
-			result = divide(operantA, operantB);
+			result = divide(operandA, operandB);
 		}else if(operator == "%"){
-			result = modulus(operantA, operantB);
+			result = modulus(operandA, operandB);
 		}
 		showResult(result);
 	}else{
